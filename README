@@ -1,13 +1,35 @@
 MigrationHelpers
 ================
 
-Introduction goes here.
+This migration helper is intended to make migrations easier and allow the user to add data integrity at the
+database level. This currently only includes foreign keys.
 
+TODO: Add a :unique => true availability to the add_column method to create the unique index
+TODO: Make the script/generate script add foreign keys to column:references columns
 
 Example
 =======
 
-Example goes here.
+Let's assume you have two tables.
+
+Table 'users' has fields id, name, address, phone, zip, role_id
+Table 'roles' has fields id, name
+
+In the up migration you can create a foreign key:
+
+add_foreign_key :users, :role_id, :roles
+
+In the down migration you can drop a foreign key:
+
+drop_foreign_key :users, :role_id
 
 
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+If you do not wish to use the id column in the referenced table, you may specify the column
+with a forth parameter on add_foreign_key. A fifth parameter is a custom constraint name.
+
+
+Copyright (c) 2009 Charles Max Wood, released under the MIT license
+
+
+Charles Wood blogs at http://www.charlesmaxwood.com
+He works and blogs at http://www.pmamediagroup.com
