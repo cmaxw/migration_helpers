@@ -1,1 +1,1 @@
-# Include hook code here
+require 'migration_helpers'
