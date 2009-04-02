@@ -28,8 +28,8 @@ If you do not wish to use the id column in the referenced table, you may specify
 with a forth parameter on add_foreign_key. A fifth parameter is a custom constraint name.
 
 
-Copyright (c) 2009 Charles Max Wood, released under the MIT license
-
+Copyright (c) 2009 PMA Media Group, released under the MIT license
+Written by Charles Wood
 
 Charles Wood blogs at http://www.charlesmaxwood.com
 He works and blogs at http://www.pmamediagroup.com
